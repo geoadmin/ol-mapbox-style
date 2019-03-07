@@ -636,7 +636,7 @@ export default function(olLayer, glStyle, source, resolutions = defaultResolutio
           const haloColor = colorWithOpacity(getValue(layer, 'paint', 'text-halo-color', zoom, f), opacity);
           if (haloColor) {
             textHalo.setColor(haloColor);
-            textHalo.setWidth(getValue(layer, 'paint', 'text-halo-width', zoom, f));
+            textHalo.setWidth(getValue(layer, 'paint', 'text-halo-width', zoom, f) + 0.1 * textSize);
             text.setStroke(textHalo);
           } else {
             text.setStroke(undefined);
